@@ -86,6 +86,14 @@
           alert ("The disconnection button is located in the wallet!");
         }
       }
+
+      Wallet.changeButton = (data) => {
+        if(data == 'disconnected'){
+          $('#btn-connect').text('Connect Wallet')
+        } else {
+          $('#btn-connect').text(obscureAddress(data))
+        }
+      }
       });
     </script>
 </head>
